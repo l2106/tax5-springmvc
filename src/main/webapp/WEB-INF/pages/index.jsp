@@ -35,6 +35,14 @@
         #step {
             margin-bottom: 60px;
         }
+
+        .table {
+            width: 29.7cm;
+            height: 21cm;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -440,7 +448,147 @@
 
 
     <div id="tablePrint">
+        <%--<div class="page-header">--%>
+        <%--<h2 align="center">契税申报表</h2>--%>
+        <%--</div>--%>
+        <table border="1" class="table" width="29.7cm">
+            <caption>契税申报表</caption>
+            <tr>
+                <td colspan="2">纳税人识别号：</td>
+                <td colspan="7"></td>
+            </tr>
 
+            <tr>
+                <td rowspan="4" width="10%">承受方信息</td>
+                <td width="10%">名称</td>
+                <td width="30%" colspan="3"></td>
+                <td width="50%" colspan="4">单位&nbsp;个人</td>
+            </tr>
+            <tr>
+                <td width="10%">登记注册类型</td>
+                <td width="30%" colspan="3"></td>
+                <td width="20%" colspan="2">所属行业</td>
+                <td width="30%" colspan="2"></td>
+            </tr>
+            <tr>
+                <td width="10%">身份证件类型</td>
+                <td width="30%" colspan="3">身份证</td>
+                <td width="20%" colspan="2">身份证件号码</td>
+                <td width="30%" colspan="2"></td>
+            </tr>
+            <tr>
+                <td width="10%">联系人</td>
+                <td width="30%" colspan="3"></td>
+                <td width="20%" colspan="2">联系方式</td>
+                <td width="30%" colspan="2"></td>
+            </tr>
+
+            <tr>
+                <td rowspan="3" width="10%">转让方信息</td>
+                <td width="10%">名称</td>
+                <td width="30%" colspan="3"></td>
+                <td width="50%" colspan="4">单位&nbsp;个人</td>
+            </tr>
+            <tr>
+                <td width="10%">纳税人识别号</td>
+                <td width="10%"></td>
+                <td width="20%" colspan="2">登记注册类型</td>
+                <td width="20%" colspan="2"></td>
+                <td width="10%">所属行业</td>
+                <td width="20%" colspan="2"></td>
+            </tr>
+            <tr>
+                <td width="10%">身份证件类型</td>
+                <td width="10%"></td>
+                <td width="20%" colspan="2">身份证件号码</td>
+                <td width="20%" colspan="2"></td>
+                <td width="10%">联系方式</td>
+                <td width="20%" colspan="2"></td>
+            </tr>
+
+            <tr>
+                <td rowspan="4" width="10%">土地房屋权属转移信息</td>
+                <td width="10%">合同签订日期</td>
+                <td width="10%"></td>
+                <td width="20%" colspan="2">土地房屋坐落地址</td>
+                <td width="20%" colspan="2"></td>
+                <td width="10%">权属转移对象</td>
+                <td width="20%" colspan="2"></td>
+            </tr>
+            <tr>
+                <td width="10%" rowspan="2">权属转移方式</td>
+                <td width="10%" rowspan="2">下拉框</td>
+                <td width="20%" colspan="2" rowspan="2">用途</td>
+                <td width="20%" colspan="2" rowspan="2">下拉框</td>
+                <td width="10%">家庭唯一住房</td>
+                <td width="20%">90平方米以上<br>90平方米以下</td>
+            </tr>
+            <tr>
+                <td width="10%">家庭第二套住房</td>
+                <td width="20%">90平方米以上<br>90平方米以下</td>
+            </tr>
+            <tr>
+                <td width="10%">权属转移面积</td>
+                <td width="10%"></td>
+                <td width="20%" colspan="2">成交价格</td>
+                <td width="20%" colspan="2"></td>
+                <td width="10%">成交单价</td>
+                <td width="20%" colspan="2"></td>
+            </tr>
+
+            <tr>
+                <td width="10%">税款征收信息</td>
+                <td width="10%">评估价格</td>
+                <td width="10%"></td>
+                <td width="20%" colspan="2">计税价格</td>
+                <td width="20%" colspan="2"></td>
+                <td width="10%">税率</td>
+                <td width="20%" colspan="2"></td>
+            </tr>
+            <tr>
+                <td width="10%">计征税额</td>
+                <td width="10%"></td>
+                <td width="10%">减免性质代码</td>
+                <td width="10%"></td>
+                <td width="10%">减免税额</td>
+                <td width="10%"></td>
+                <td width="10%">应纳税额</td>
+                <td width="20%" colspan="2"></td>
+            </tr>
+
+            <tr>
+                <td colspan="9">以下由纳税人填写：</td>
+            </tr>
+            <tr>
+                <td width="10%">纳税人声明</td>
+                <td colspan="8">此纳税申报表是根据《中华人民共和国契税展性条例》和国家有关税收规定填报的，是真实的、可靠的、完整的。</td>
+            </tr>
+
+            <tr>
+                <td width="10%">纳税人签章</td>
+                <td width="10%"></td>
+                <td width="10%">代理人签章</td>
+                <td width="20%" colspan="2">代理人签章</td>
+                <td width="20%" colspan="2">代理人身份证号</td>
+                <td width="30%" colspan="2"></td>
+            </tr>
+
+            <tr>
+                <td colspan="9">以下由纳税机关填写：</td>
+            </tr>
+
+            <tr>
+                <td width="10%">受理人</td>
+                <td width="10%"></td>
+                <td width="10%">受理日期</td>
+                <td width="20%" colspan="2"></td>
+                <td width="20%" colspan="2">受理税务机关签章</td>
+                <td width="30%" colspan="2"></td>
+            </tr>
+            <tr>
+                <td colspan="9">本表一式两份，一份纳税人留存，一份税务机关留存。</td>
+            </tr>
+        </table>
     </div>
 </div>
 
