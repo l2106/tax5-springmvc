@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="/tax5-springmvc/statics/css/jquery.step.css">
     <script src="/tax5-springmvc/statics/js/bootstrap.min.js"></script>
     <script src="/tax5-springmvc/statics/js/jquery.step.min.js"></script>
+    <script src="/tax5-springmvc/statics/js/html2canvas.js"></script>
+    <script src="/tax5-springmvc/statics/js/canvas2image.js"></script>
     <title>契税业务办理</title>
     <style>
         #tab {
@@ -451,7 +453,7 @@
         <%--<div class="page-header">--%>
         <%--<h2 align="center">契税申报表</h2>--%>
         <%--</div>--%>
-        <table border="1" class="table" width="29.7cm">
+        <table border="1" class="table">
             <caption>契税申报表</caption>
             <tr>
                 <td colspan="2">纳税人识别号：</td>
@@ -589,10 +591,41 @@
                 <td colspan="9">本表一式两份，一份纳税人留存，一份税务机关留存。</td>
             </tr>
         </table>
+        <div align="center">
+            <button id="returnTableInfo" type="button" class="btn btn-lg"> 返回</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="down" href="" download="tableImg.png">下载图片</a>
+        </div>
+
     </div>
 </div>
 
 </body>
+<script>
+    var pic;
+    var canvas2 = document.createElement("canvas");
+    var _canvas = document.querySelector('.table');
+    var w = parseInt(window.getComputedStyle(_canvas).width);
+    var h = parseInt(window.getComputedStyle(_canvas).height);
+    //将canvas画布放大若干倍，然后盛放在较小的容器内，就显得不模糊了
+    canvas2.width = w * 2;
+    canvas2.height = h * 2;
+    canvas2.style.width = w + "px";
+    canvas2.style.height = h + "px";
+    //可以按照自己的需求，对context的参数修改,translate指的是偏移量
+    var context = canvas2.getContext("2d");
+    context.scale(2, 2);
+    html2canvas(document.querySelector('.table'), {canvas: canvas2}).then(function (canvas) {
+        pic = canvas;
+        //canvas转换成url，然后利用a标签的download属性，直接下载，绕过上传服务器再下载
+        document.querySelector(".down").setAttribute('href', canvas.toDataURL());
+    });
+    //点击的时候把图片复制到下面那个div下
+    // function copy(){
+    //     document.querySelector(".copy").appendChild(pic);
+    // }
+</script>
+
 
 <script type="text/javascript">
     var $step = $("#step");
