@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: cn.jpush.api:jpush-client:3.2.15">
+    <CLASSES>
+      <root url="jar://E:/maven-3.5.0/repository/cn/jpush/api/jpush-client/3.2.15/jpush-client-3.2.15.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://E:/maven-3.5.0/repository/cn/jpush/api/jpush-client/3.2.15/jpush-client-3.2.15-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://E:/maven-3.5.0/repository/cn/jpush/api/jpush-client/3.2.15/jpush-client-3.2.15-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="tax5springmvc:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="tax5-springmvc.war">
+      <element id="artifact" artifact-name="tax5springmvc:war exploded" />
+    </root>
+  </artifact>
+</component>
